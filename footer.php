@@ -144,29 +144,35 @@
 
      $(document).ready(function() {
         var date = new Date().getFullYear() + "-" +  parseInt(new Date().getMonth() + 1 ) + "-" + new Date().getDate()
-        $('#appointDate').attr('min', date);
-         $('#appointmentForm').on('submit', function(event) {
+      
+        var forms = $('.form-appointment');
+            forms.foreach((form, index)=>{
+              form.find("input[name='appointDate']").attr('min', date);
+              $(form).on('submit', function(event) {
              event.preventDefault(); // Prevent the default form submission
              // Serialize the form data
              var formData = $(this).serialize();
              formData += "&subject=Appointment Booking";
              // Submit the form data using jQuery AJAX
-             $.ajax({
-                 type: 'POST',
-                 url: 'contact.php', // The URL to which the request is sent
-                 data: formData,
-                 success: function(response) {
-                     // Display the response message
-                     $('#responseAppointMessage').html('<p class="text-success">Your appointment has been successfully scheduled.</p>');
-                     // Optionally reset the form
-                     $('#appointmentForm')[0].reset();
-                 },
-                 error: function(xhr, status, error) {
-                     $('#responseAppointMessage').html('<p class="text-danger">There was an error submitting the form. Please try again.</p>');
-                     $('#appointmentForm')[0].reset();
-                  }
-             });
-         });
+                    $.ajax({
+                        type: 'POST',
+                        url: 'contact.php', // The URL to which the request is sent
+                        data: formData,
+                        success: function(response) {
+                            // Display the response message
+                            $('#responseAppointMessage').html('<p class="text-success">Your appointment has been successfully scheduled.</p>');
+                            // Optionally reset the form
+                            $('#appointmentForm')[0].reset();
+                        },
+                        error: function(xhr, status, error) {
+                            $('#responseAppointMessage').html('<p class="text-danger">There was an error submitting the form. Please try again.</p>');
+                            $('#appointmentForm')[0].reset();
+                        }
+                    });
+                }); 
+            })
+       
+        
      });
 
      $(document).ready(function() {

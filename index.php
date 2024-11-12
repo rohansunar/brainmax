@@ -17,7 +17,8 @@
                 <a href="contact.php" class="btn btn-secondary py-sm-3 px-sm-5 rounded-pill me-3 animated slideInLeft" data-bs-toggle="modal" data-bs-target="#staticBackdrop">Book an Appointment</a>
                 <a href="contact.php" class="btn btn-light py-sm-3 px-sm-5 rounded-pill animated slideInRight">Contact Us</a>
             </div>
-            <div class="col-lg-6 text-center text-lg-start">
+            <div class="col-lg-6 text-center text-lg-start appointClass">
+                <?php include('form-appointment.php'); ?>
                 <!-- <img class="img-fluid animated zoomIn" src="img/hero.png" alt="">
                 <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSe4_kZW-goFGPhAqwGUC1GhuvmmWHyIQjpk5gpJgkFKVNxlww/viewform?embedded=true" width="640" height="1071" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe> -->
             </div>
