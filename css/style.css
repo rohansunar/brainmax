@@ -129,9 +129,9 @@ h6,
     transition: .5s;
 }
 
-.sticky-top.navbar-light .navbar-brand img {
+/* .sticky-top.navbar-light .navbar-brand img {
     max-height: 45px;
-}
+} */
 
 @media (max-width: 991.98px) {
     .sticky-top.navbar-light {
@@ -169,7 +169,7 @@ h6,
         border-bottom: 1px solid rgba(256, 256, 256, .1);
         z-index: 999;
     }
-    
+
     .sticky-top.navbar-light {
         position: fixed;
         background: #FFFFFF;
@@ -211,7 +211,8 @@ h6,
 /*** Hero Header ***/
 .hero-header {
     margin-bottom: 6rem;
-    padding: 18rem 0;
+    /* padding: 18rem 0; */
+    padding: 11rem 0;
     background:
         url(../img/blob-top-left.png),
         url(../img/blob-top-right.png),
@@ -299,6 +300,7 @@ h6,
 /*** Feature ***/
 .feature-item {
     transition: .5s;
+    height: 100%;
 }
 
 .feature-item:hover {
@@ -343,6 +345,18 @@ h6,
     background: var(--light);
     overflow: hidden;
     transition: .5s;
+    height: 100%;
+}
+
+.service-item .btn-get-quote {
+    display: none;
+    background: #fff;
+    border-radius: 3px;
+    padding: 2px 10px;
+}
+
+.service-item:hover .btn-get-quote {
+    display: inline;
 }
 
 .service-item:hover {
@@ -589,3 +603,43 @@ h6,
 .footer .footer-menu a:hover {
     color: var(--secondary);
 }
+
+
+/* 
+Logo
+*/
+
+.logo-normal {
+    display: none;
+}
+
+.sticky-top .logo-normal {
+    display: inline;
+}
+
+.sticky-top .logo-white {
+    display: none;
+}
+
+
+/* form appointment */
+
+.form-appointment {}
+
+
+/* Team */
+
+.team .team-item,
+.team .team-inner {
+    height: 100%;
+}
+
+/* portfolio-container */
+/* .portfolio-item {
+    display: flex;
+    height: auto;
+}
+
+.portfolio-item .item {
+    height: 100%;
+} */
