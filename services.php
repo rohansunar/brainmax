@@ -62,14 +62,14 @@ $services = [
     ]
 ];
 ?>
-    
+
 <!-- Navbar & Hero Start -->
 <?php include('./navbar.php') ?>
 <!-- Navbar & Hero End -->
 
 <div class="container-xxl py-5 bg-primary hero-header">
     <div class="container my-5 py-5 px-lg-5">
-    <h1 class="text-center text-white animated slideInDown">Services</h1>
+        <h1 class="text-center text-white animated slideInDown">Services</h1>
         <!-- <div class="row g-5 py-5">
             <div class="col-12 text-center">
                 <h1 class="text-white animated slideInDown">Services</h1>
@@ -88,30 +88,32 @@ $services = [
 
 
 <!-- Service Start -->
-<div class="container-xxl py-5">
-<div class="container py-5 px-lg-5">
-    <div class="wow fadeInUp" data-wow-delay="0.1s">
-        <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
-        <h1 class="text-center mb-5">What Solutions We Provide</h1>
-    </div>
-    <div class="row g-4">
-        <?php $i = 0.1 ?>
-        <?php foreach($services as $service => $details){ ?>
-            <?php echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="$is">';
-                    $i += 0.1;
-             ?>
-       
-            <div class="service-item d-flex flex-column text-center rounded">
-                <div class="service-icon flex-shrink-0">
-                  <?="<i class='{$details['icon']}'></i> ";?>
-                  
-                </div>
-                <h5 class="mb-3"><?=$service?></h5>
-                <p class="m-0"><?=$details['description']?></p>
-            </div>
+<div class="container-xxl">
+    <div class="container  px-lg-5">
+        <div class="wow fadeInUp" data-wow-delay="0.1s">
+            <p class="section-title text-secondary justify-content-center"><span></span>Our Services<span></span></p>
+            <h1 class="text-center mb-5">What Solutions We Provide</h1>
         </div>
-        <?php } ?>
-        <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
+        <div class="row g-4">
+            <?php $i = 0.1 ?>
+            <?php foreach ($services as $service => $details) { ?>
+                <?php echo '<div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="$is">';
+                $i += 0.1;
+                ?>
+
+                <div class="service-item d-flex flex-column text-center rounded">
+                    <div class="service-icon flex-shrink-0">
+                        <?= "<i class='{$details['icon']}'></i> "; ?>
+
+                    </div>
+                    <h5 class="mb-3"><?= $service ?></h5>
+                    <p class="m-0"><?= $details['description'] ?></p>
+                    <br>
+                    <p><a href="#" data-bs-target="#getAQuote" data-bs-toggle="modal" class="btn-get-quote">Get a quote</a></p>
+                </div>
+        </div>
+    <?php } ?>
+    <!-- <div class="col-lg-4 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
             <div class="service-item d-flex flex-column text-center rounded">
                 <div class="service-icon flex-shrink-0">
                     <i class="fa fa-laptop-code fa-2x"></i>
