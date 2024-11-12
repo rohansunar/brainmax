@@ -1,3 +1,17 @@
+<?php
+$teams = [
+        ["name"=>"Rohan Sonar","designation"=>"CEO & Founder"],
+        ["name"=>"Upendra Prasad","designation"=>"DevOps Engineer"],
+        ["name"=>"Mahesh Chhetri","designation"=>"Technical Lead"],
+        ["name"=>"Sneha Iyer","designation"=>"Mobile App Developer"],
+        ["name"=>"Sanju Sonar","designation"=>"Frontend Developer"],
+        ["name"=>"Dipen Biswa","designation"=>"IT Project Manager"],
+        ["name"=>"Rahul Reddy","designation"=>"Cybersecurity Analyst"],
+        ["name"=>"Raj Sharma","designation"=>"UI/UX Designer"],
+        ["name"=>"Abhishek Kumar","designation"=>"Software Tester"],
+        ["name"=>"Uttam Kumar","designation"=>"Backend Developer"]
+    ];
+?>  
   <!-- Team Start -->
   <div class="container-xxl py-5 team">
       <div class="container py-5 px-lg-5">
@@ -6,42 +20,18 @@
               <h1 class="text-center mb-5">Our Team Members</h1>
           </div>
           <div class="row g-4">
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
-                  <div class="team-item bg-light rounded">
-                      <div class="text-center border-bottom p-4 team-inner">
-                          <img class="img-fluid rounded-circle mb-4" src="https://placehold.co/400x400" alt="">
-                          <h5>Rohan Sonar</h5>
-                          <span>CEO & Founder</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.3s">
-                  <div class="team-item bg-light rounded">
-                      <div class="text-center border-bottom p-4 team-inner">
-                          <img class="img-fluid rounded-circle mb-4" src="https://placehold.co/400x400" alt="">
-                          <h5>Upendra Prasad</h5>
-                          <span>DevOps</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-                  <div class="team-item bg-light rounded">
-                      <div class="text-center border-bottom p-4 team-inner">
-                          <img class="img-fluid rounded-circle mb-4" src="https://placehold.co/400x400" alt="">
-                          <h5>Tony Johnson</h5>
-                          <span>SEO Expert</span>
-                      </div>
-                  </div>
-              </div>
-              <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
-                  <div class="team-item bg-light rounded">
-                      <div class="text-center border-bottom p-4">
-                          <img class="img-fluid rounded-circle mb-4" src="https://placehold.co/400x400" alt="">
-                          <h5>Mahesh Chhetri</h5>
-                          <span>Technical Lead</span>
-                      </div>
-                  </div>
-              </div>
+              <?php foreach ($teams as $team) { ?>
+                <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.5s">
+                    <div class="team-item bg-light rounded">
+                        <div class="text-center border-bottom p-4">
+                            <img class="img-fluid rounded-circle mb-4" src="img/users.png" alt="">
+                            <h5><?=$team['name']?></h5>
+                            <span><?=$team['designation']?></span>
+                        </div>
+                    </div>
+                </div>
+              <?php } ?>
+
           </div>
       </div>
   </div>

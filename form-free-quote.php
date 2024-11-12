@@ -1,4 +1,5 @@
-<form method="POST" action="contact.php" class="form-appointment">
+<form id="quoteForm" class="form-appointment">
+<div id="responseQuoteMessage" class="text-center"></div>
     <div class="row g-3">
         <div class="col-md-6">
             <div class="form-floating">

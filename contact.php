@@ -6,6 +6,8 @@ $reponseMessage = "";
 $name = "";
 $email = "";
 $subject = "";
+$appointDate = "";
+$appointTime = "";
 $message = "";
 // Check if the form has been submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -13,10 +15,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 $name = isset($_POST['name']) ? htmlspecialchars(trim($_POST['name'])) : '';
 $email = isset($_POST['email']) ? htmlspecialchars(trim($_POST['email'])) : '';
 $subject = isset($_POST['subject']) ? htmlspecialchars(trim($_POST['subject'])) : '';
+$appointDate = isset($_POST['appointDate']) ? htmlspecialchars(trim($_POST['appointDate'])) : '';
+$appointTime = isset($_POST['appointTime']) ? htmlspecialchars(trim($_POST['appointTime'])) : '';
 $message = isset($_POST['message']) ? htmlspecialchars(trim($_POST['message'])) : ''; 
 
 // Prepare the data to be saved
-$dataToSave = "Name: $name\nEmail: $email\nSubject: $subject\nMessage: $message\n\n";
+$dataToSave = "Name: $name\nEmail: $email\nSubject: $subject\nAppointDate:$appointDate\nAppointTime:$appointTime\nMessage: $message\n\n";
 
 // Save the data to the text file
 file_put_contents($dataFile, $dataToSave, FILE_APPEND | LOCK_EX);
